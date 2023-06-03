@@ -20,7 +20,7 @@ class WithPyAudio(AudioDataMixin):
 
         self.wf = wf
         self.p = p
-        print(f"{wf.getsampwidth()=},{wf.getnchannels()=},{wf.getframerate()=}")
+        #print(f"{wf.getsampwidth()=},{wf.getnchannels()=},{wf.getframerate()=}")
 
         self.stream = p.open(
             format=p.get_format_from_width(wf.getsampwidth()),
@@ -68,7 +68,7 @@ class WithMediaPlayer:
 
 
 def main(video_file, audio_file, use_pyaudio=True):
-    print(f"{video_file=},{audio_file=},{use_pyaudio=}")
+    # print(f"{video_file=},{audio_file=},{use_pyaudio=}")
     cap = cv2.VideoCapture(video_file)
 
     if use_pyaudio:
